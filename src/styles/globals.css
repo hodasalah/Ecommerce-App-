@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap");
+
+:root {
+	--dark-color: #272d4e;
+	--light-gray: #94a2b3;
+	--purple-color: #7854f7;
+	--green-color: #70c217;
+	--light-blue: #299ef3;
+	--red-color: #df4223;
+	--dark-blue: #082755;
+	--body-font: "Roboto", sans-serif;
+}
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	color: var(--dark-color);
+	font-size: 16px;
+}
+::selection {
+	color: #fff;
+	background: var(--red-color);
+	text-shadow: none;
+}
+/*scroll bar style*/
+body::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.19);
+	background-color: var(--lightGray-color);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--dark-blue);
+	outline: 1px solid var(--dark-blue);
+}
