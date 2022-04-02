@@ -9,7 +9,7 @@ module.exports = {
 		extend: {
 			colors: {
 				eshop_blue: {
-					light: "#299ef3",
+					light: "rgb(91, 165, 250);",
 					DEFAULT: "#272d4e",
 				},
 			},
