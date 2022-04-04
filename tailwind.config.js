@@ -8,9 +8,14 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				main_btn: {
+					bg: "#7854f7",
+					hover: "",
+				},
 				eshop_blue: {
-					light: "rgb(91, 165, 250);",
+					light: "rgb(91, 165, 250)",
 					DEFAULT: "#272d4e",
+					dark: "#062f6e",
 				},
 			},
 		},

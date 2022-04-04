@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap");
 
 :root {
@@ -9,8 +11,9 @@
 	--purple-color: #7854f7;
 	--green-color: #70c217;
 	--light-blue: rgb(91, 165, 250);
-	--dark-blue: #082755;
+	--dark-blue: #062f6e;
 	--body-font: "Roboto", sans-serif;
+	--head-font: "Raleway", sans-serif;
 }
 *,
 ::after,
@@ -23,12 +26,13 @@
 
 body {
 	font-family: var(--body-font);
+	position: relative;
 	color: var(--dark-color);
 	font-size: 16px;
 }
 ::selection {
 	color: #fff;
-	background: var(--green-color);
+	background: var(--dark-color);
 	text-shadow: none;
 }
 /*scroll bar style*/
@@ -45,9 +49,37 @@ body::-webkit-scrollbar-thumb {
 	background-color: var(--dark-blue);
 	outline: 1px solid var(--dark-blue);
 }
+h1,
+h2,
+h3,
+h4h5,
+h6 {
+	font-family: var(--head-font);
+}
+
 /* using @layer*/
 @layer components {
 	.link {
 		@apply cursor-pointer hover:underline;
 	}
+}
+.banner {
+	background-image: url("/assets/images/bg-shape.png"),
+		linear-gradient(
+			180deg,
+			#e5efff 0%,
+			rgba(229, 239, 255, 0.262661) 83.7%,
+			rgba(229, 239, 255, 0) 100%
+		);
+
+	background-position: right top, top left;
+	background-size: 40%, 100%;
+	background-repeat: no-repeat;
+	/*height: calc(100vh - (48px + 74px));*/
+	position: relative;
+}
+.carousel-root,
+.carousel-slider {
+	width: 100%;
+	height: 100%;
 }
