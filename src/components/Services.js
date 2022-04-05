@@ -10,19 +10,19 @@ const Services = () => {
 			</h2>
 
 			<div className="max-w-6xl  mt-20 mx-auto  flex flex-wrap md:space-between">
-				<div className="card mb-8 md:mb-0 relative max-w-xs mx-auto">
+				<div className="card mb-8  md:mb-0 relative max-w-xs mx-auto">
 					<div className="absolute -top-10 -left-16 hidden sm:block">
 						<img src="/assets/images/dots.svg" />
 					</div>
-					<div className="img rounded-3xl bg-gray-50">
+					<div className="img rounded-3xl bg-gray-50 shadow-inner">
 						<Image
 							src="/assets/images/send.svg"
 							alt="send"
-							width={350}
-							height={300}
+							width={280}
+							height={200}
 						/>
 					</div>
-					<div className="info py-6 px-2">
+					<div className="info py-6 px-2 ">
 						<h4 className="font-bold text-xl text-black">
 							All You Need To Start
 						</h4>
@@ -33,19 +33,19 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-blue-400">
+						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>
 				</div>
 				{/* card 2 */}
 				<div className="card relative mb-8 md:mb-0 max-w-xs mx-auto lg:mt-10">
-					<div className="img rounded-3xl  bg-gray-50">
+					<div className="img rounded-3xl  bg-gray-50 shadow-inner">
 						<Image
 							src="/assets/images/buy.svg"
 							alt="send"
-							width={350}
-							height={300}
+							width={280}
+							height={200}
 						/>
 					</div>
 					<div className="info py-6 px-2">
@@ -57,7 +57,7 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-blue-400">
+						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>
@@ -68,12 +68,12 @@ const Services = () => {
 						<img src="/assets/images/dots.svg" />
 					</div>
 
-					<div className="img rounded-3xl bg-gray-50">
+					<div className="img rounded-3xl bg-gray-50 shadow-inner">
 						<Image
 							src="/assets/images/receive.svg"
 							alt="send"
-							width={350}
-							height={300}
+							width={280}
+							height={200}
 						/>
 					</div>
 					<div className="info  py-6 px-2">
@@ -87,7 +87,7 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-blue-400">
+						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>

@@ -83,3 +83,15 @@ h6 {
 	width: 100%;
 	height: 100%;
 }
+.bg-feat {
+	background: url("/assets/images/purple-bg.svg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+@media (max-width: 1260px) {
+	.bg-feat {
+		background: linear-gradient(var(--purple-color), #7854f7);
+		height: auto;
+	}
+}

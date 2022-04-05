@@ -17,6 +17,7 @@ module.exports = {
 					DEFAULT: "#272d4e",
 					dark: "#062f6e",
 				},
+				greenLink: "var(--green-color)",
 			},
 		},
 	},
