@@ -10,7 +10,8 @@ const Features = () => {
 			head2: "	Online From Your Home",
 			para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id nihil cumque illo mollitia consequatur voluptatem nobis eos voluptatibus, quis explicabo,corrupti ipsa odio, soluta fugiat sapiente voluptatum aliquid quam.",
 			classList: "-top-14 left-0",
-			infoClass: "lg:ml-60 lg:mt-20 text-center md:text-left px-4",
+			infoClass:
+				" ml-0 mt-0 lg:ml-60 lg:mt-20 text-center lg:text-left px-4",
 		},
 		{
 			title: "second",
@@ -20,11 +21,15 @@ const Features = () => {
 			head2: "	Shopping any Time",
 			para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id nihil cumque illo mollitia consequatur voluptatem nobis eos voluptatibus, quis explicabo,corrupti ipsa odio, soluta fugiat sapiente voluptatum aliquid quam.",
 			classList: "-bottom-32 right-0",
-			infoClass: "lg:mr-60 lg:-mt-20 text-center md:text-left px-4",
+			infoClass:
+				"mr-0 mt-0 lg:mr-60 lg:-mt-20 text-center lg:text-left px-4",
 		},
 	];
 	return (
-		<div className="bg-feat ">
+		<div className="bg-feat relative">
+			<div className="flex absolute top-0 w-96 right-0 opacity-25">
+				<img src="/assets/images/bg-shape.png" />
+			</div>
 			<div className="max-w-6xl h-full mx-auto relative">
 				{/* row 1 */}
 				{content.map((item) => (
@@ -48,7 +53,19 @@ const Features = () => {
 										height={600}
 									/>
 								</div>
-								<div className="block lg:hidden ">
+								<div className="block relative lg:hidden ">
+									<div className="flex absolute lg:hidden w-96 -left-20">
+										<img
+											src="/assets/images/Ellipse 32.png"
+											className="w-16 h-16 "
+											loading="lazy"
+										/>
+										<img
+											src="/assets/images/Ellipse 31.png"
+											className="w-80 h-80 block max-w-min"
+											loading="lazy"
+										/>
+									</div>
 									<Image
 										src={item.smallImg}
 										width={477}

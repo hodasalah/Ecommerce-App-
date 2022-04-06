@@ -4,6 +4,8 @@ import { Carousel } from "react-responsive-carousel";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
 const Banner = () => {
+
+	// sa5480000458608010483201
 	const BannerContent = [
 		{
 			head: "Payments infrastructure for the internet",
@@ -23,7 +25,7 @@ const Banner = () => {
 		},
 	];
 	return (
-		<div className={"banner"}>
+		<div className={"banner bg-banner bg-no-repeat"}>
 			<Carousel
 				autoPlay
 				infiniteLoop

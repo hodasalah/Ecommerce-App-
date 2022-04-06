@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Features from "../components/Features";
 import Header from "../components/Header";
 import Services from "../components/Services";
+import Testim from "./../components/Testim";
 
 export default function Home() {
 	return (
@@ -19,6 +20,8 @@ export default function Home() {
 				<Services />
 				{/* Features */}
 				<Features />
+				{/* Trusted */}
+				<Testim />
 				{/* products-simples */}
 			</main>
 		</div>

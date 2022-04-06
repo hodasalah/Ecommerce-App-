@@ -56,6 +56,10 @@ h4h5,
 h6 {
 	font-family: var(--head-font);
 }
+h1,
+h2 {
+	line-height: 1.3 !important;
+}
 
 /* using @layer*/
 @layer components {
@@ -64,18 +68,8 @@ h6 {
 	}
 }
 .banner {
-	background-image: url("/assets/images/bg-shape.png"),
-		linear-gradient(
-			180deg,
-			#e5efff 0%,
-			rgba(229, 239, 255, 0.262661) 83.7%,
-			rgba(229, 239, 255, 0) 100%
-		);
-
-	background-position: right top, top left;
+	background-position: right top, left top;
 	background-size: 40%, 100%;
-	background-repeat: no-repeat;
-	/*height: calc(100vh - (48px + 74px));*/
 	position: relative;
 }
 .carousel-root,
@@ -89,9 +83,22 @@ h6 {
 	background-repeat: no-repeat;
 	height: 800px;
 }
+.testi {
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5),
+		0px 25px 52.8537px rgba(215, 228, 249, 0.5);
+}
+.testi .control-arrow {
+	top: 100% !important;
+	color: #062f6e !important;
+}
+.testi .control-prev:before {
+	border-right: 8px solid #062f6e !important;
+}
 @media (max-width: 1260px) {
 	.bg-feat {
-		background: linear-gradient(var(--purple-color), #7854f7);
+		background: linear-gradient(var(--purple-color), #7754f7c3);
 		height: auto;
 	}
 }
