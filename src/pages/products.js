@@ -65,13 +65,13 @@ const products = ({ products }) => {
 					/>
 					<div className="px-10">
 						<h2 className="text-left text-6xl text-[#4e7570]  ">
-							NEW
+							New Colors
 						</h2>
 						<h2 className="text-left text-8xl text-yellow-500">
-							FASHION
+							Fashion Styles
 						</h2>
 						<h2 className="text-left text-6xl text-[#4e7570] ">
-							SALE
+							NEW SALE
 						</h2>
 					</div>
 				</div>
