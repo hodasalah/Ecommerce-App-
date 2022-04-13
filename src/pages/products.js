@@ -16,8 +16,8 @@ const products = ({ products }) => {
 	};
 	return (
 		<div className="bg-section pro-banner">
-			<Slider {...settings}>
-				<div className="  pt-32 pb-40 relative">
+			<Slider {...settings} className="h-screen">
+				<div className="py-40 relative w-full h-full">
 					<img
 						loading="lazy"
 						src="/assets/images/Design.png"
@@ -28,23 +28,25 @@ const products = ({ products }) => {
 							objectFit: "cover",
 							position: "absolute",
 							top: 0,
+							bottom: 0,
 							left: 0,
 							zIndex: -1,
+							opacity: 1,
 						}}
 					/>
 					<div className="px-10">
-						<h2 className="text-left font-bold text-7xl text-[#4e7570] ">
+						<h2 className="text-left font-bold text-6xl text-[#4e7570] ">
 							New Collection
 						</h2>
-						<h2 className="text-left font-bold text-7xl text-[#4e7570]">
+						<h2 className="text-left font-bold text-8xl text-yellow-500">
 							Summer Sale
 						</h2>
-						<p className="text-left mt-6 font-thin text-2xl text-[#4e7570]">
+						<h2 className="text-left  font-thin text-6xl text-[#4e7570]">
 							SALE OFFER
-						</p>
+						</h2>
 					</div>
 				</div>
-				<div className=" pt-32 pb-40 relative">
+				<div className="py-40 relative w-full h-full">
 					<img
 						loading="lazy"
 						src="/assets/images/design-3.png"
@@ -55,8 +57,10 @@ const products = ({ products }) => {
 							objectFit: "cover",
 							position: "absolute",
 							top: 0,
+							bottom: 0,
 							left: 0,
 							zIndex: -1,
+							opacity: 1,
 						}}
 					/>
 					<div className="px-10">
@@ -73,11 +77,27 @@ const products = ({ products }) => {
 				</div>
 			</Slider>
 
-			<div className="grid grid-flow-row-dense xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 md:-mt-48">
-				{products &&
-					products?.map((product) => (
-						<Product key={product.id} product={product} />
-					))}
+			<div className="grid grid-flow-row-dense xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 md:-mt-52">
+				{products && (
+					<>
+						{products?.slice(0, 4).map((product) => (
+							<Product key={product.id} product={product} />
+						))}
+						<img
+							loading="lazy"
+							className="md:col-span-full"
+							src="/assets/images/jewlery.jpg"
+						/>
+						<div className="md:col-span-2">
+							{products?.slice(4, 5).map((product) => (
+								<Product key={product.id} product={product} />
+							))}
+						</div>
+						{products?.slice(5).map((product) => (
+							<Product key={product.id} product={product} />
+						))}
+					</>
+				)}
 				{!products && (
 					<h2 className="text-lg text-blue-400 font-bold text-center my-4">
 						No Products yet
