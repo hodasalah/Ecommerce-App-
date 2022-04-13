@@ -1,11 +1,18 @@
 import React from "react";
-
-import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
 const Banner = () => {
-
-	// sa5480000458608010483201
+	const settings = {
+		infinite: true,
+		autoplaySpeed: 2000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 500,
+		autoplaySpeed: 5000,
+		cssEase: "linear",
+	};
 	const BannerContent = [
 		{
 			head: "Payments infrastructure for the internet",
@@ -26,18 +33,11 @@ const Banner = () => {
 	];
 	return (
 		<div className={"banner bg-banner bg-no-repeat"}>
-			<Carousel
-				autoPlay
-				infiniteLoop
-				showStatus={false}
-				showIndicators={false}
-				showThumbs={false}
-				interval={5000}
-			>
+			<Slider {...settings}>
 				{BannerContent.map((item) => (
 					<div
 						key={item.head}
-						className="flex flex-wrap pb-8 pt-20 px-4 md:pl-10 items-center"
+						className="slider-content flex flex-wrap pb-8 pt-20 px-4 md:pl-10 items-center"
 					>
 						<div
 							className={
@@ -51,9 +51,9 @@ const Banner = () => {
 								{item.para}
 							</p>
 							<div className="flex flex-wrap items-center space-x-4">
-								<button className="py-3 bg-main_btn-bg rounded-full focus:outline-none px-8 text-white mr-2">
+								<a href="/products" className="py-3 bg-main_btn-bg rounded-full focus:outline-none px-8 text-white mr-2">
 									Start Shopping
-								</button>
+								</a>
 								<p className="flex space-x-3 mt-2 sm:mt-0">
 									<span>OR</span>
 									<a className=" text-blue-400 cursor-pointer border-b-2 pb-1">
@@ -74,7 +74,7 @@ const Banner = () => {
 						</div>
 					</div>
 				))}
-			</Carousel>
+			</Slider>
 		</div>
 	);
 };

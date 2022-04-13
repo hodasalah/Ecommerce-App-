@@ -3,7 +3,7 @@ import styles from "../styles/Logo.module.css";
 const Logo = () => {
 	return (
 		<div className={`${styles.app__logo} `}>
-			<span className={styles.logo__span}>e</span>-shop
+			<span className={styles.logo__span}>E</span>-shop
 		</div>
 	);
 };

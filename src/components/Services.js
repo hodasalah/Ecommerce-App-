@@ -14,14 +14,15 @@ const Services = () => {
 					<div className="absolute -top-10 -left-16 hidden sm:block">
 						<img src="/assets/images/dots.svg" />
 					</div>
-					<div className="img rounded-3xl bg-gray-50 shadow-inner">
-						<Image
-							src="/assets/images/send.svg"
-							alt="send"
-							width={280}
-							height={200}
-						/>
-					</div>
+
+					<Image
+						src="/assets/images/send.svg"
+						alt="send"
+						width={280}
+						height={200}
+						className="w-full h-full rounded-3xl  bg-gray-50 shadow-inner"
+					/>
+
 					<div className="info py-6 px-2 ">
 						<h4 className="font-bold text-xl text-black">
 							All You Need To Start
@@ -33,21 +34,21 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
+						<a href="/products" className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>
 				</div>
 				{/* card 2 */}
 				<div className="card relative mb-8 md:mb-0 max-w-xs mx-auto lg:mt-10">
-					<div className="img rounded-3xl  bg-gray-50 shadow-inner">
-						<Image
-							src="/assets/images/buy.svg"
-							alt="send"
-							width={280}
-							height={200}
-						/>
-					</div>
+					<Image
+						src="/assets/images/buy.svg"
+						alt="send"
+						width={280}
+						height={200}
+						className="w-full h-full rounded-3xl  bg-gray-50 shadow-inner"
+					/>
+
 					<div className="info py-6 px-2">
 						<h4 className="font-bold text-xl text-black">
 							Go To your Shopping cart
@@ -57,25 +58,25 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
+						<a href='/products' className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>
 				</div>
 				{/* card3 */}
 				<div className="card relative mb-8 md:mb-0 max-w-xs mx-auto lg:mt-20">
-					<div className="hidden xs:block absolute -right-20 top-40 sm:-right-8">
+					<div className="absolute top-20 -right-8 sm:block hidden ">
 						<img src="/assets/images/dots.svg" />
 					</div>
 
-					<div className="img rounded-3xl bg-gray-50 shadow-inner">
-						<Image
-							src="/assets/images/receive.svg"
-							alt="send"
-							width={280}
-							height={200}
-						/>
-					</div>
+					<Image
+						src="/assets/images/receive.svg"
+						alt="send"
+						width={280}
+						height={200}
+						className="w-full h-full rounded-3xl bg-gray-50 shadow-inner"
+					/>
+
 					<div className="info  py-6 px-2">
 						<h4 className="font-bold text-xl text-black">
 							Just In one Day
@@ -87,7 +88,7 @@ const Services = () => {
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt .
 						</p>
-						<a className="inline-flex text-sm border-b-2 capitalize text-greenLink">
+						<a href="/products" className="inline-flex text-sm border-b-2 capitalize text-greenLink">
 							go shopping now <ChevronRightIcon className="h-4" />
 						</a>
 					</div>

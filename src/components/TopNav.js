@@ -18,9 +18,12 @@ const TopNav = () => {
 		<>
 			<div className="relative z-40 flex items-center bg-eshop_blue p-1 flex-grow py-2">
 				{/* logo  */}
-				<div className="my-1 sm:mx-4 flex flex-grow sm:flex-grow-0 items-center">
+				<a
+					href="/"
+					className="my-1 sm:mx-4 flex flex-grow sm:flex-grow-0 items-center"
+				>
 					<Logo />
-				</div>
+				</a>
 				{/* search bar */}
 				<div className="bg-blue-400 hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer">
 					<input

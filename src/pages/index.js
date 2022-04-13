@@ -1,9 +1,5 @@
 import Head from "next/head";
-import Banner from "../components/Banner";
-import Features from "../components/Features";
-import Header from "../components/Header";
-import Services from "../components/Services";
-import Testim from "./../components/Testim";
+import { Banner, Services, Features, People, Testim } from "./../components";
 
 export default function Home() {
 	return (
@@ -11,8 +7,7 @@ export default function Home() {
 			<Head>
 				<title>e-shop</title>
 			</Head>
-			{/* header */}
-			<Header />
+
 			<main>
 				{/* banner */}
 				<Banner />
@@ -22,7 +17,8 @@ export default function Home() {
 				<Features />
 				{/* Trusted */}
 				<Testim />
-				{/* products-simples */}
+				{/* People */}
+				<People />
 			</main>
 		</div>
 	);
