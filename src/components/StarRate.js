@@ -2,12 +2,11 @@ import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const StarRate = ({ rate }) => {
-	console.log(rate * 20 - 0.8, rate * 20, rate);
 	return (
-		<div className="relative">
+		<div className="relative inline-flex">
 			<div
 				className="flex overflow-hidden"
-				style={{ width: `${rate * 20 - 5}px` }}
+				style={{ width: `${rate * 20 - 4}px` }}
 			>
 				{[...Array(5)].map((_, i) => {
 					return (
@@ -24,8 +23,10 @@ const StarRate = ({ rate }) => {
 					);
 				})}
 			</div>
-
-			<div className="flex w-full h-full absolute top-0 left-0">
+			<div
+				className="flex  h-full absolute top-0 left-0 "
+				style={{ width: "calc(100% + 4 )px" }}
+			>
 				{[...Array(5)].map((_, i) => {
 					return (
 						<AiOutlineStar

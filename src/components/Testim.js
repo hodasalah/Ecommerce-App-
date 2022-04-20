@@ -87,7 +87,7 @@ const Testim = () => {
 						/>
 					</div>
 
-					<Slider {...settings} className="testi   mx-auto">
+					<Slider {...settings} className="testi mx-auto">
 						{content.map((item) => (
 							<div
 								key={item.title}
@@ -128,7 +128,6 @@ const Testim = () => {
 					/>
 					<img
 						src={"/assets/images/per-5.svg"}
-						
 						height={202}
 						loading="lazy"
 						className="lg:ml-32 lg:mr-0 md:ml-20 md:mr-20 mr-8 ml-8  lg:my-20 my-0 md:mt-36 lg:w-36 w-24"

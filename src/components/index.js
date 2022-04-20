@@ -1,4 +1,3 @@
-export { default as Header } from "./Header";
 export { default as Banner } from "./Banner";
 export { default as Services } from "./Services";
 export { default as Features } from "./Features";
@@ -7,3 +6,5 @@ export { default as Testim } from "./Testim";
 export { default as Footer } from "./Footer";
 export { default as StarRate } from "./StarRate";
 export { default as Product } from "./Product";
+export { default as FeaturedProducts } from "./FeaturedProducts";
+export { default as Divider } from "./Divider";

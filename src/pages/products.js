@@ -1,8 +1,13 @@
 import React from "react";
 import { Product } from "../components";
 import Slider from "react-slick";
+import { useRouter } from "next/router";
+import { fetchApi, baseURL } from "../../utils/fetchApi";
 
-const products = ({ products }) => {
+const products = ({ data }) => {
+	const router = useRouter();
+	const { products, keyword, categories } = data;
+	console.log(data);
 	const settings = {
 		infinite: true,
 		autoplaySpeed: 2000,
@@ -16,7 +21,7 @@ const products = ({ products }) => {
 	};
 	return (
 		<div className="bg-section pro-banner">
-			<Slider {...settings} className="h-screen">
+			<Slider {...settings} className="lg:h-screen">
 				<div className="py-40 relative w-full h-full">
 					<img
 						loading="lazy"
@@ -34,14 +39,14 @@ const products = ({ products }) => {
 							opacity: 1,
 						}}
 					/>
-					<div className="px-10">
-						<h2 className="text-left font-bold text-6xl text-[#4e7570] ">
+					<div className="md:px-10 px-4">
+						<h2 className="text-left font-bold text-5xl md:text-6xl  text-[#4e7570] ">
 							New Collection
 						</h2>
-						<h2 className="text-left font-bold text-8xl text-yellow-500">
+						<h2 className="text-left font-bold text-6xl md:text-8xl  text-yellow-500">
 							Summer Sale
 						</h2>
-						<h2 className="text-left  font-thin text-6xl text-[#4e7570]">
+						<h2 className="text-left  font-thin text-5xl md:text-6xl text-[#4e7570]">
 							SALE OFFER
 						</h2>
 					</div>
@@ -63,25 +68,29 @@ const products = ({ products }) => {
 							opacity: 1,
 						}}
 					/>
-					<div className="px-10">
-						<h2 className="text-left text-6xl text-[#4e7570]  ">
+					<div className="md:px-10 px-4">
+						<h2 className="text-left text-5xl  md:text-6xl text-[#4e7570]  ">
 							New Colors
 						</h2>
-						<h2 className="text-left text-8xl text-yellow-500">
+						<h2 className="text-left  text-6xl md:text-8xl text-yellow-500">
 							Fashion Styles
 						</h2>
-						<h2 className="text-left text-6xl text-[#4e7570] ">
+						<h2 className="text-left  text-5xl md:text-6xl text-[#4e7570] ">
 							NEW SALE
 						</h2>
 					</div>
 				</div>
 			</Slider>
 
-			<div className="grid grid-flow-row-dense xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 md:-mt-52">
+			<div className="grid grid-flow-row-dense xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 lg:-mt-52">
 				{products && (
 					<>
 						{products?.slice(0, 4).map((product) => (
-							<Product key={product.id} product={product} />
+							<Product
+								key={product.productId}
+								product={product}
+								categories={categories}
+							/>
 						))}
 						<img
 							loading="lazy"
@@ -90,11 +99,19 @@ const products = ({ products }) => {
 						/>
 						<div className="md:col-span-2">
 							{products?.slice(4, 5).map((product) => (
-								<Product key={product.id} product={product} />
+								<Product
+									key={product.productId}
+									product={product}
+									categories={categories}
+								/>
 							))}
 						</div>
 						{products?.slice(5).map((product) => (
-							<Product key={product.id} product={product} />
+							<Product
+								key={product.productId}
+								product={product}
+								categories={categories}
+							/>
 						))}
 					</>
 				)}
@@ -103,21 +120,23 @@ const products = ({ products }) => {
 						No Products yet
 					</h2>
 				)}
+				products here
 			</div>
 		</div>
 	);
 };
 
 export default products;
-export async function getServerSideProps(context) {
-	const data = await fetch("https://fakestoreapi.com/products")
-		.then((res) => res.json())
-		.catch((err) => {
-			console.log(err);
-		});
+export async function getServerSideProps({ query }) {
+	const q = query.q || "skin";
+
+	const data = await fetchApi(
+		`${baseURL}/products/search?q=${q}&pageSize=60&currentPage=1`
+	);
+
 	return {
 		props: {
-			products: data || null,
+			data: data || null,
 		},
 	};
 }

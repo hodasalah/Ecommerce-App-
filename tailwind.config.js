@@ -14,6 +14,9 @@ module.exports = {
 				testi: "url('/assets/images/testi.svg')",
 			},
 			colors: {
+				secondary: "#d26f2c",
+				mid_red: "#fd775d",
+				danger: "#f10a95",
 				main_btn: {
 					bg: "#7854f7",
 					hover: "",

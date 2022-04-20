@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Logo from "./Logo";
 import { MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 import OverLay from "./OverLay";
 import MainNav from "./MainNav";
+import { rootCategories } from "./../../utils/rootCategories";
 
 const Navbar = () => {
 	const [showList, setShowList] = useState(false);

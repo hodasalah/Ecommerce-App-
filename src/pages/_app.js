@@ -4,7 +4,8 @@ import { store } from "../app/store";
 import "../styles/globals.css";
 import Router from "next/router";
 import Head from "next/head";
-import { Header, Footer } from "./../components";
+import { Footer } from "./../components";
+import Header from "../components/Header/Header";
 import NProgress from "nprogress";
 
 const MyApp = ({ Component, pageProps }) => {

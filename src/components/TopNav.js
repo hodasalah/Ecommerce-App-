@@ -1,19 +1,30 @@
-import React, { useState } from "react";
-import Logo from "./Logo";
+import React, { useEffect, useState } from "react";
+import { Logo } from "./utilities";
 import {
 	ChevronDownIcon,
 	SearchIcon,
 	ShoppingCartIcon,
 } from "@heroicons/react/outline";
-import OverLay from "./OverLay";
+import OverLay from "./utilities/OverLay";
+import { useRouter } from "next/router";
 
-const TopNav = () => {
+const Topnav = () => {
 	const [showList, setShowList] = useState(false);
+	const [keyword, setKeyword] = useState("");
 	const showListStyle = {
 		transform: "translateY(10px)",
 		opacity: 1,
 		transition: "all 0.5s ease",
 	};
+	const router = useRouter();
+	const setQuery = (e) => {
+		const { query } = router;
+		if (keyword !== "") {
+			query["q"] = keyword;
+		}
+		router.push({ pathname: "/products", query });
+	};
+
 	return (
 		<>
 			<div className="relative z-40 flex items-center bg-eshop_blue p-1 flex-grow py-2">
@@ -29,8 +40,12 @@ const TopNav = () => {
 					<input
 						type="text"
 						className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none"
+						value={keyword}
+						onChange={(e) => setKeyword(e.target.value)}
 					/>
-					<SearchIcon className="h-12 p-4 text-white" />
+					<button onClick={() => setQuery()}>
+						<SearchIcon className="h-12 p-4 text-white" />
+					</button>
 				</div>
 				{/* right side */}
 				<div className="text-white flex items-center text-xs sm:mx-6 whitespace-nowrap md:space-x-6 space-x-3">
@@ -56,7 +71,7 @@ const TopNav = () => {
 								showList
 									? showListStyle
 									: {
-											transform: "translateY(-100%)",
+											transform: "translateY(-200%)",
 											opacity: 0,
 											transition: "all 0.5s ease",
 									  }
@@ -105,4 +120,4 @@ const TopNav = () => {
 	);
 };
 
-export default TopNav;
+export default Topnav;
